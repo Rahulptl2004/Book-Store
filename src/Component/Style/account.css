@@ -1,0 +1,55 @@
+.account {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.account>h1 {
+  font-size: x-large;
+  font-weight: bolder;
+
+}
+
+.btnn {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  width: 200px;
+
+}
+
+.btnn>button {
+  width: 60px;
+  box-shadow: 0 3px 6px rgb(142, 141, 140);
+  font-size: 16px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details>input {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgb(142, 141, 140);
+  /* background-color: #e0dddd; */
+  width: 100%;
+}
+
+.details>span {
+  padding: 6px;
+  box-shadow: 0 3px 6px rgb(142, 141, 140);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #e0dddd;
+  width: 100%;
+}

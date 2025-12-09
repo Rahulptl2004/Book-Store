@@ -1,0 +1,22 @@
+.login {
+    height: 200px;
+    width: 300px;
+
+}
+
+.lbtn {
+    border-radius: 10px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+input {
+
+    border: 1px solid;
+    width: 300px;
+}

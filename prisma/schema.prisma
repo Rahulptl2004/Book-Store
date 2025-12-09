@@ -1,0 +1,104 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  email    String  @unique
+  mobile   String?
+  address  String?
+  password String
+
+  createAt  DateTime   @default(now())
+  update    DateTime   @updatedAt
+
+}
+
+model Project {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  title       String
+  gitHubLink  String?
+  link        String?
+  discription String
+  coverImage  String?
+
+  createAt DateTime @default(now())
+  update   DateTime @updatedAt
+}
+
+model Contact {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  name    String
+  email   String
+  message String
+
+  createAt DateTime @default(now())
+}
+
+model AddressID {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  name      String
+  mobile    String
+  pinCode   String
+  locality  String
+  house     String
+  city      String
+  state     String
+  landmark  String?
+  altMobile String?
+  userId    String   @db.ObjectId
+  createAt  DateTime @default(now())
+  update    DateTime @updatedAt
+}
+
+model IdProof {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId       String
+  documentType String
+  documentName String
+  name         String
+  createAt     DateTime @default(now())
+  update       DateTime @updatedAt
+}
+
+model book {
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  language   String
+  pages      String
+  category   String
+  price      String
+  discount   String
+  author     String
+  publish    String
+  image_link String
+  about      String
+  rating     String
+  isDeleted  Boolean    @default(false)
+
+}
+
+model cart {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  bookId    String
+  userId    String
+  qty       Int
+  saveLater Boolean  @default(false)
+  createAt  DateTime @default(now())
+  update    DateTime @updatedAt
+}
+
+model Wishlist {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String
+  bookId String
+}

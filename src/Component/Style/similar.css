@@ -1,0 +1,62 @@
+.main>h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px;
+
+}
+
+.all-Books {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 20px;
+  padding: 10px 10px 20px 10px;
+  scroll-behavior: smooth;
+}
+
+.book {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgb(142, 141, 140);
+  border-radius: 8px;
+  width: 220px;
+  height: auto;
+  padding: 28px;
+  scrollbar-width: none;
+  flex-shrink: 0;
+  background-color: #fff;
+
+}
+
+.book img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.Book-details .title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 13px;
+}
+
+.curr-price {
+  color: black;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.total-price {
+  text-decoration: line-through;
+  color: #666;
+  margin-right: 5px;
+}
+
+.discount {
+  color: green;
+  font-weight: 600;
+}

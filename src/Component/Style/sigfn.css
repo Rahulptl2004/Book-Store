@@ -1,0 +1,26 @@
+.sign {
+  display: flex;
+  justify-content: center;
+}
+
+.sbtn {
+  border-radius: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.checkbox >input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox > label {
+  font-size: 13px;
+  color: #333;
+}

@@ -1,0 +1,196 @@
+.book-details {
+    box-sizing: border-box;
+}
+
+.infobook {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 20px;
+}
+
+.book-img {
+    border: 1px solid rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    width: 33vw;
+    position: relative;
+}
+
+.book-img i {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    right: 10px;
+}
+
+.book-img img {
+    height: 360px;
+    width: 250px;
+}
+
+.detail-box {
+    width: 44vw;
+}
+
+.detail-box>.content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.detail-box>.content>h1 {
+    font-size: 25px;
+    font-family: Rajdhani, sans-serif;
+    font-weight: bold;
+}
+
+.detail-box>.content>p {
+    font-weight: 500;
+}
+
+.content>.price {
+    display: flex;
+    font-size: 20px;
+    gap: 5px;
+    width: 165px;
+    justify-content: space-between;
+}
+
+.price>.curr-price {
+    color: black;
+    font-weight: bold;
+}
+
+.price>.total-price {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.price>.discount {
+    color: green;
+    font-weight: 600;
+}
+
+.content>.logo-img {
+    margin-top: 15px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 20px 0;
+    display: flex;
+    gap: 60px;
+}
+
+.detail-box>.two-btns {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.detail-box>.two-btns>.cart {
+    border: 1px solid red;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #d610ab;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-box>.two-btns>.buy {
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #d610ab;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-details>.rat-spe {
+    display: flex;
+    border-bottom: 1px solid #a6a4a4;
+    width: 100%;
+    height: 370px;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.rat-spe>.rating {
+    width: 50%;
+}
+
+.book-details>.rat-spe>div>.rr {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.rat-spe>.rating>.rat-review>.rat-box {
+    width: 25%;
+    text-align: center;
+}
+
+.rat-spe>.rating>.rat-review>.rat-box>.review {
+    font-size: 25px;
+}
+
+.rat-spe>.rating>.rat-review>.rat-box>.review2 {
+    color: #666;
+}
+
+.rat-spe>.rating>.rat-review {
+    margin: 20px 0;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.rat-spe>.rating>.rat-review>.review-box {
+    width: 25%;
+    font-size: 20px;
+}
+
+.rat-spe>.rating>.rat-review>.review-box>.rebox>ul>li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 100px;
+    display: block;
+    background-color: rgb(217, 126, 126);
+    height: 3px;
+}
+
+.spe {
+    width: 50%;
+}
+.spe >table{
+    border-spacing: 2px;
+    border-collapse: separate;
+    border: 1px solid #ece6e6;
+    border-radius: 10px;
+    height: 70%;
+    width: 600px;
+}
+
+.spe>.table>thead>tr>th {
+    text-align: left;
+    font-size: 20px;
+    border-bottom: 1px solid #ece6e6;
+    padding: 10px;
+}
+
+.spe>.table>tbody>tr>td {
+    padding: 10px 10px;
+}
+
+.book-details>.similar-book>.similar-head {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0 20px;
+}

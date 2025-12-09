@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.sidebar {
+    width: 280px;
+    background: #fff;
+    box-shadow: 0px 2px 20px 2px rgb(206, 205, 205); 
+    padding: 15px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #b8b7b7;
+}
+
+.profile-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin-left: 10px;
+}
+
+.profile-name h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-section {
+    border-bottom: 1px solid #b8b7b7;
+    padding: 10px 20px;
+}
+
+.sidebar-section h4 {
+    color: #090909;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.sidebar-section ul li button {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 8px 0;
+    color: #393838;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sidebar-section ul li button:hover {
+    color: #1a73e8;
+}
+
+.logout {
+    border-top: 1px solid #b8b7b7 ;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.logout button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.logout button:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.profile>.hello {
+    width: 68vw;
+    height: auto;
+    border: 1px rgb(172, 89, 89);
+    box-shadow: 0px 2px 20px 2px rgb(206, 205, 205);
+
+}

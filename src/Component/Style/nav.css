@@ -1,0 +1,112 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 23px;
+  border-bottom: 1px solid #949494;
+  background-color: white;
+  position: relative;
+  z-index: 100;
+}
+.img img {
+  height: 50px;
+}
+.list ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.list ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.search ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.search ul li a {
+  color: black;
+  font-size: 20px;
+}
+
+.mobile-search {
+  display: none;
+}
+
+.mobile-search a {
+  color: black;
+  font-size: 20px;
+}
+
+.navIcon {
+  display: none;
+}
+
+.navIcon button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.openNavicon {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  z-index: 99;
+}
+
+.menuOption ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menuOption ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+  .list,
+  .search {
+    display: none;
+  }
+
+  .mobile-search {
+    display: block;
+  }
+
+  .navIcon {
+    display: block;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .img {
+    position: absolute;
+    left: 50%;
+  }
+  .openNavicon {
+    top: 60px;
+  }
+}

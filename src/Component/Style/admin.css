@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.admin{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 15px;
+    
+}
+.profileimg{
+    border-bottom: 1px solid #b1afaf;
+    width: 280px;
+    display: flex;
+    padding:  0 15px  0;
+    align-items: center;
+}
+
+.sidebar-Book {
+    border-radius: 8px;
+
+    height: 60vh;
+    width: 280px;
+    background: #fff;
+    box-shadow: 0px 2px 20px 2px rgb(206, 205, 205); 
+    padding: 15px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+.section{
+     padding:  0 15px  0;
+}
+.side{
+    height: auto;
+    border-radius: 8px;
+
+    /* border: 1px solid #b1afaf; */
+     box-shadow: 0px 2px 20px 2px rgb(206, 205, 205); 
+}
