@@ -1,7 +1,7 @@
 'use client'
 import { join } from 'path';
 import React, { useState } from 'react'
-import '../../Component/Style/auth.css'
+import '../../Component/style/auth.css'
 import Login from '@/src/Component/Login/Login';
 import Sign from '@/src/Component/Sign/Sign';
 const page = () => {

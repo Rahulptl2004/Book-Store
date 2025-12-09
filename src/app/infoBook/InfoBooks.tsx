@@ -11,7 +11,6 @@ const InfoBooks = () => {
     const [isCart, setIsCart] = useState(false)
     const [isWishlist, setIsWishlist] = useState(false)
     const [loading, setLoading] = useState(true);
-
     // console.log("Current Book:", currBook);
     const searchParams = useSearchParams();
     const bookId = searchParams.get("id");
