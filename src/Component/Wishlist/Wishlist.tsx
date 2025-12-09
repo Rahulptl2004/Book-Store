@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import '../Style/wishlist.css'
+import '../style/wishlist.css'
 import axios from 'axios';
 import { it } from 'node:test';
 const Wishlist = () => {
