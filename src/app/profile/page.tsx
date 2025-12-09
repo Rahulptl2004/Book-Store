@@ -9,8 +9,8 @@ import { useRouter } from 'next/navigation';
 import Logo from '@/src/component/Logout/Logout';
 import Address from '@/src/component/Address/Address';
 import IdProof from '@/src/component/IdProof/IdProof';
-import Wishlist from '@/src/component/Wishlist/Wishlist';
 import Login from '@/src/component/Login/Login';
+import Wishlist from '@/src/component/Wishlist';
 
 const profile = () => {
   const [userId, setUserID] = useState<any>(null);
