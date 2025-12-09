@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 const page = () => {
     const [detail, setDetail] = useState<[]>([]);
     const [loading, setLoading] = useState(true);
-
+    const [isCart, setIsCart] = useState(false)
     // DATA GET 
     const getData = async () => {
         try {
@@ -22,6 +22,28 @@ const page = () => {
         finally {
             setLoading(false);
 
+        }
+    };
+    const addToCart = async (bookId: string) => {
+        try {
+            const res = await axios.post(`/api/cart/add`, { bookId });
+
+            if (res.data.success) {
+                setIsCart(true);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    };
+    const removeFromCart = async (bookId: string) => {
+        try {
+            const res = await axios.post(`/api/cart/remove`, { bookId });
+
+            if (res.data.success) {
+                setIsCart(false);
+            }
+        } catch (err) {
+            console.log(err);
         }
     };
 
@@ -88,11 +110,11 @@ const page = () => {
                                         <div>
                                             {!isCart ? (<button
                                                 className='cart'
-                                                onClick={() => addToCart(currBook.id)}>
+                                                onClick={() => addToCart(i.id)}>
                                                 ADD TO CART
                                             </button>) : (<button
                                                 className='cart'
-                                                onClick={() => removeFromCart(currBook.id)}
+                                                onClick={() => removeFromCart(i.id)}
                                             >
                                                 REMOVE
                                             </button>)}
