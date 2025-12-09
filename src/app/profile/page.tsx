@@ -1,16 +1,16 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import '../../Component/style/profile.css'
+import '../../component/style/profile.css'
 import axios from 'axios';
-import Edit from '@/src/Component/Edit/Edit';
-import Changepass from '@/src/Component/ChangePass/ChangePass';
+import Edit from '@/src/component/Edit/Edit';
+import Changepass from '@/src/component/ChangePass/ChangePass';
 import Cookie from 'js-cookie';
 import { useRouter } from 'next/navigation';
-import Logo from '@/src/Component/Logout/Logout';
-import Address from '@/src/Component/Address/Address';
-import IdProof from '@/src/Component/IdProof/IdProof';
-import Wishlist from '@/src/Component/Wishlist/Wishlist';
-import Login from '@/src/Component/Login/Login';
+import Logo from '@/src/component/Logout/Logout';
+import Address from '@/src/component/Address/Address';
+import IdProof from '@/src/component/IdProof/IdProof';
+import Wishlist from '@/src/component/Wishlist/Wishlist';
+import Login from '@/src/component/Login/Login';
 
 const profile = () => {
   const [userId, setUserID] = useState<any>(null);

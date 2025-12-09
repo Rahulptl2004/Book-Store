@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import '../../Component/style/cart.css'
+import '../../component/style/cart.css'
 import axios from 'axios';
 import { log } from 'console';
 // import Book from '@/src/Component/BookStore/Book';

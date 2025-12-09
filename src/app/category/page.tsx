@@ -1,6 +1,6 @@
 "use client";
 
-import Book from "@/src/Component/BookStore/Book";
+import Book from "@/src/component/BookStore/Book";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 

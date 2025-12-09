@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react'
-import AdminBook from '@/src/Component/AdminBook/AdminBook';
-import '../../Component/style/admin.css'
+import AdminBook from '@/src/component/AdminBook/AdminBook';
+import '../../component/style/admin.css'
 
 const page = () => {
     const [current, setCurr] = useState("Books");
