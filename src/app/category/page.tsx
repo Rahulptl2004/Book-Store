@@ -1,5 +1,4 @@
 "use client";
-
 import Book from "@/src/component/BookStore/Book";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -35,7 +34,7 @@ const Page = () => {
     const getData = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`/api/allbooks?Category=${curCatgry}`);
+            const res = await axios.get(`/api/allbooks`);
             const books = res.data.data || [];
             console.log(books)
             setAllBook(books);
