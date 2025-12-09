@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import "../Style/pass.css"
+import "../style/pass.css"
 import Cookie  from 'js-cookie';
 const ChangePass = () => {
   const [currPass, setCurrPass] = useState("")

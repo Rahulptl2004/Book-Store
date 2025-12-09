@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 // import "../Style/address.css";
-import "../Style/adminbook.css";
+import "../style/adminbook.css";
 import axios from "axios";
 import Cookie from "js-cookie";
 const AdminBook = () => {

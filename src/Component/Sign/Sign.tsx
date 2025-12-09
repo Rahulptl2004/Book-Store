@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import '../Style/sigfn.css'
+import '../style/sigfn.css'
 import axios from 'axios';
 // import { useRouter } from 'next/router';
 import { useRouter } from 'next/navigation';

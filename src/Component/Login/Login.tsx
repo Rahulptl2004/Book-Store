@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 
-import '../Style/login.css'
+import '../style/login.css'
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Cookie from 'js-cookie';

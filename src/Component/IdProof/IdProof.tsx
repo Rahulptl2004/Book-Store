@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../Style/idproof.css";
+import "../style/idproof.css";
 import Cookie from "js-cookie";
 import axios from "axios";
 
