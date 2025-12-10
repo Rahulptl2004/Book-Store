@@ -1,9 +1,9 @@
 'use client'
 import { join } from 'path';
 import React, { useState } from 'react'
-import '../../component/style/auth.css'
-import Login from '@/src/component/Login/Login';
-import Sign from '@/src/component/Sign/Sign';
+import '../../components_temp/style/auth.css'
+import Login from '@/src/components_temp/Login/Login';
+import Sign from '@/src/components_temp/Sign/Sign';
 const page = () => {
     const [currCompo, setCurrCompo] = useState("login");
 

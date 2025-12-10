@@ -1,8 +1,8 @@
 "use client";
 import Book from '@/src/component/BookStore/Book';
-import '../../component/style/infoBook.css'
+import '../../components_temp/style/infoBook.css'
 import React, { useEffect, useState } from 'react'
-import SimilarBook from '@/src/component/SimilarBook/SimilarBook';
+import SimilarBook from '@/src/components_temp/SimilarBook/SimilarBook';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 

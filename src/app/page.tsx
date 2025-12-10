@@ -1,6 +1,6 @@
 import Image from "next/image";
-import HomePage from "../component/HomePage/HomePage";
-import SimilarBook from "../component/SimilarBook/SimilarBook";
+import HomePage from "../components_temp/HomePage/HomePage";
+import SimilarBook from "../components_temp/SimilarBook/SimilarBook";
 export default function Home() {
   return (
     <div>
