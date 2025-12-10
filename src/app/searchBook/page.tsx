@@ -9,8 +9,12 @@ const Page = () => {
 
     const [cart, setCart] = useState<string[]>([]);
     const [wishlist, setWishlist] = useState<string[]>([]);
+    const [search, setSearch] = useState("");
 
- 
+    const filteredBooks = detail.filter((book: any) =>
+        book.title.toLowerCase().includes(search.toLowerCase())
+    );
+
     const getData = async () => {
         try {
             setLoading(true);
@@ -52,7 +56,7 @@ const Page = () => {
         }
     };
 
-  
+
     const removeFromCart = async (bookId: string) => {
         try {
             const res = await axios.post(`/api/cart/remove`, { bookId });
@@ -65,23 +69,23 @@ const Page = () => {
         }
     };
     const loadUserData = async () => {
-    try {
-        const wish = await axios.get("/api/profile/wishlist/allbookreturn");
-        const cartRes = await axios.get("/api/cart/all");
+        try {
+            const wish = await axios.get("/api/profile/wishlist/allbookreturn");
+            const cartRes = await axios.get("/api/cart/all");
 
-        if (wish.data.success) setWishlist(wish.data.data);
-        if (cartRes.data.success) setCart(cartRes.data.data);
+            if (wish.data.success) setWishlist(wish.data.data);
+            if (cartRes.data.success) setCart(cartRes.data.data);
 
-    } catch (err) {
-        console.log(err);
-    }
-};
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
 
-   useEffect(() => {
-    getData();
-    loadUserData();
-}, []);
+    useEffect(() => {
+        getData();
+        loadUserData();
+    }, []);
 
 
     if (loading) {
@@ -103,7 +107,8 @@ const Page = () => {
 
                     <form className='border-2 border-red-500 w-140 p-2 rounded-xl flex justify-between items-center'>
                         <input type="text" placeholder='Enter Book Name'
-                               className='border-none outline-none' />
+                            className='border-none outline-none w-full'  value={search}
+  onChange={(e) => setSearch(e.target.value)}/>
                         <i className="fa fa-search" aria-hidden="true"></i>
                     </form>
 
@@ -113,23 +118,23 @@ const Page = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-100'>
-                <div className='border-t border-gray-400 w-full grid grid-cols-5'>
+            <div className='bg-gray-200'>
+                <div className='border-t border-gray-400 w-full flex flex-wrap justify-center gap-4 '>
 
-                    {detail.map((i: any) => {
+                    {filteredBooks.map((i: any) => {
                         const isLiked = wishlist.includes(i.id);
                         const isInCart = cart.includes(i.id);
 
                         return (
                             <div key={i.id}
-                                className='flex m-2 h-70 rounded-xl shadow-[1px_2px_5px_gray] justify-center items-center'>
+                                className='flex m-2  bg-gray-100 p-2 w-53 h-auto rounded-xl shadow-[1px_2px_5px_gray] justify-center items-center '>
 
-                                <div className="flex flex-col">
-                                    
-                                    <div className="border-1 w-38 h-30 flex justify-center items-center relative">
+                                <div className="flex flex-col items-center">
+
+                                    <div className="border-1 w-40 h-40 flex  justify-center text-justify relative">
 
                                         {i.image_link ? (
-                                            <img src={i.image_link} className="h-full object-contain" />
+                                            <img src={i.image_link} className=" object-contain" />
                                         ) : (
                                             <div className="w-full h-40 bg-gray-200 flex items-center justify-center text-gray-500">
                                                 No Image
@@ -145,7 +150,8 @@ const Page = () => {
                                         </div>
                                     </div>
 
-                                    <div className='mt-2 mx-3'>
+                                    <div className='mt-2 w-40 text-center'>
+
                                         <h1 className='font-semibold text-sm mt-3'>{i.title}</h1>
 
                                         <div className='text-sm mt-1'>
@@ -162,14 +168,14 @@ const Page = () => {
                                     <div className='my-4'>
                                         {!isInCart ? (
                                             <button
-                                                className='border-1 border-red-400 w-40 h-7 text-sm rounded-md shadow-[1px_2px_5px_red]'
+                                                className='cursor-pointer border-1 border-red-400 w-40 h-7 text-sm rounded-md shadow-[1px_2px_5px_red]'
                                                 onClick={() => addToCart(i.id)}
                                             >
                                                 ADD TO CART
                                             </button>
                                         ) : (
                                             <button
-                                                className='border-1 border-red-400 w-40 h-7 text-sm rounded-md shadow-[1px_2px_5px_red]'
+                                                className=' cursor-pointer border-1 border-red-400 w-40 h-7 text-sm rounded-md shadow-[1px_2px_5px_red]'
                                                 onClick={() => removeFromCart(i.id)}
                                             >
                                                 REMOVE
