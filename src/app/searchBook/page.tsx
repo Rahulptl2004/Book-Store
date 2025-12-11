@@ -100,23 +100,30 @@ const Page = () => {
         <div className='w-full'>
 
             <div className='py-5 px-6'>
-                <div className='flex flex-row justify-between w-300 items-center'>
+                <div className='flex flex-col sm:flex-row justify-between items-center gap-4 w-full'>
+
                     <div className='font-ysabeau text-[25px] font-semibold'>
                         <h1>SEARCH</h1>
                     </div>
 
-                    <form className='border-2 border-red-500 w-140 p-2 rounded-xl flex justify-between items-center'>
-                        <input type="text" placeholder='Enter Book Name'
-                            className='border-none outline-none w-full'  value={search}
-  onChange={(e) => setSearch(e.target.value)}/>
-                        <i className="fa fa-search" aria-hidden="true"></i>
+                    <form className='border-2 border-red-500 w-60 sm:w-1/2 p-2 rounded-xl flex items-center gap-2'>
+                        <input
+                            type="text"
+                            placeholder='Enter Book Name'
+                            className='border-none outline-none w-full'
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                        <i className="fa fa-search"></i>
                     </form>
 
-                    <a href="./" className='h-10'>
+                    <a href="./" className='text-[24px] flex items-center'>
                         <i className="fa-solid fa-house"></i>
                     </a>
+
                 </div>
             </div>
+
 
             <div className='bg-gray-200'>
                 <div className='border-t border-gray-400 w-full flex flex-wrap justify-center gap-4 '>

@@ -66,7 +66,7 @@ const Page = () => {
     return (
         <div className="h-auto w-ful">
             <div className="flex">
-                <div className="border-x w-1/3 h-full px-7 " >
+                <div className="border-x w-60 sm:w-1/3 h-full px-7 " >
                     <div className="flex justify-between py-4">
                         <h1 className="text-2xl font-bold">Filter</h1>
                         <button className="text-l text-red-400 cursor-pointer underline">Clear All</button>
@@ -89,17 +89,17 @@ const Page = () => {
                 </div>
                 <div className="w-2/3">
                     <h2 className="text-2xl font-bold py-4 px-2">{curCatgry}</h2>
-                    <div className='border-t border-gray-400 w-full grid grid-cols-4 gap-5 p-6'>
+                    <div className='border-t border-gray-400 w-full grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6 h-[80vh] overflow-y-auto 'style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
                         {
                             detail.map((i: any) => (
                                 <div key={i.id}
-                                    className='w-46 h-65 flex m-2 rounded-xl shadow-[1px_2px_5px_gray] items-center'>
+                                    className='w-full h-53 flex m-2 rounded-xl shadow-[1px_2px_5px_gray] items-center'>
                                     <div className="flex">
                                         <a href={`/infoBook?id=${i.id}`} className="flex flex-col items-center">
                                             <div className="border-1 w-35 h-30 flex justify-center items-center">
 
                                                 {i.image_link ? (
-                                                    <img src={i.image_link} alt={i.image} className="h-full object-contain"/>
+                                                    <img src={i.image_link} alt={i.image} className="h-full object-contain" />
                                                 ) : (
                                                     <div className="w-full h-40 bg-gray-200 flex items-center justify-center text-gray-500">
                                                         No Image
