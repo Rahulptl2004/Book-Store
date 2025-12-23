@@ -47,7 +47,7 @@ const profile = () => {
   }
 
   return (
-    <div>
+    <div className='mnaimp'>
       {
         userId ? (
           <div className='profile'>
@@ -105,9 +105,7 @@ const profile = () => {
               {currCompo}
             </div>
           </div>) : (
-          <div className='loggin'>
-        
-          </div>
+          <div className='loggin'></div>
         )
       }
     </div>
