@@ -65,8 +65,8 @@ const Page = () => {
 
     return (
         <div className="h-auto w-ful">
-            <div className="flex">
-                <div className="border-x w-60 sm:w-1/3 h-full px-7 " >
+            <div className="flex flex-col sm:flex-row">
+                <div className="border-x w-full sm:w-1/3 px-4 sm:px-7" >
                     <div className="flex justify-between py-4">
                         <h1 className="text-2xl font-bold">Filter</h1>
                         <button className="text-l text-red-400 cursor-pointer underline">Clear All</button>
@@ -87,13 +87,13 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-2/3">
+                <div className="w-full sm:w-2/3">
                     <h2 className="text-2xl font-bold py-4 px-2">{curCatgry}</h2>
-                    <div className='border-t border-gray-400 w-full grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-6 h-[80vh] overflow-y-auto 'style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+                    <div className='border-t border-gray-400 w-full  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 sm:p-6 ' style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
                         {
                             detail.map((i: any) => (
                                 <div key={i.id}
-                                    className='w-full h-53 flex m-2 rounded-xl shadow-[1px_2px_5px_gray] items-center'>
+                                    className='w-full h-69 flex m-2 rounded-xl shadow-[1px_2px_5px_gray] items-center'>
                                     <div className="flex">
                                         <a href={`/infoBook?id=${i.id}`} className="flex flex-col items-center">
                                             <div className="border-1 w-35 h-30 flex justify-center items-center">

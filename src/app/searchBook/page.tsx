@@ -1,10 +1,11 @@
 "use client"
+import { book } from '@prisma/client';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 const Page = () => {
 
-    const [detail, setDetail] = useState<[]>([]);
+    const [detail, setDetail] = useState<book[]>([]);
     const [loading, setLoading] = useState(true);
 
     const [cart, setCart] = useState<string[]>([]);
@@ -106,7 +107,7 @@ const Page = () => {
                         <h1>SEARCH</h1>
                     </div>
 
-                    <form className='border-2 border-red-500 w-60 sm:w-1/2 p-2 rounded-xl flex items-center gap-2'>
+                    <form className='border-2 border-red-500 w-60 sm:w-1/2 max-w-md p-2 rounded-xl flex items-center gap-2'>
                         <input
                             type="text"
                             placeholder='Enter Book Name'
@@ -126,7 +127,7 @@ const Page = () => {
 
 
             <div className='bg-gray-200'>
-                <div className='border-t border-gray-400 w-full flex flex-wrap justify-center gap-4 '>
+                <div className='border-t border-gray-400 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-5 '>
 
                     {filteredBooks.map((i: any) => {
                         const isLiked = wishlist.includes(i.id);
@@ -134,7 +135,7 @@ const Page = () => {
 
                         return (
                             <div key={i.id}
-                                className='flex m-2  bg-gray-100 p-2 w-53 h-auto rounded-xl shadow-[1px_2px_5px_gray] justify-center items-center '>
+                                className='flex p-2 bg-gray-100 rounded-xl shadow-[1px_2px_5px_gray] justify-center '>
 
                                 <div className="flex flex-col items-center">
 
