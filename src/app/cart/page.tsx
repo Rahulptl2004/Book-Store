@@ -70,7 +70,7 @@ const page = () => {
 
     useEffect(() => {
         priceDetail();
-    })
+    },[cartItems])
     useEffect(() => {
         getCart();
         // console.log(cartItems)
