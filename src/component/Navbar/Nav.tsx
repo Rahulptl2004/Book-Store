@@ -26,7 +26,7 @@ const Nav = () => {
           <ul className="hidden md:flex gap-6 font-medium">
             <li><a className="" href="/">Home</a></li>
             <li><a className="" href="/category">Library</a></li>
-            <li><a className="" href="/about">About Us</a></li>
+            <li><a className="" href="./about">About Us</a></li>
             <li><a className="" href="/privacy">Privacy Policy</a></li>
             <li><a className="" href="/replacement">Replacement Policy</a></li>
           </ul>
@@ -78,7 +78,7 @@ const Nav = () => {
             <li><a className="" href="/category">Library</a></li>
             <li><a className="" href="/cart">Cart</a></li>
             <li><a className="" href="/profile">Account</a></li>
-            <li><a className="" href="/about">About Us</a></li>
+            <li><a className="" href="./about">About Us</a></li>
             <li><a href="/admin">Admin</a></li>
             <li><a className="" href="/privacy">Privacy Policy</a></li>
             <li><a className="" href="/replacement">Replacement Policy</a></li>
